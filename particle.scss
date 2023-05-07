@@ -22,7 +22,7 @@
   width: 1em;
   height: 1em;
   transform: translateY(100%);
-  background: rgba(235, 235, 235, 0.47);
+  background: rgba(235, 235, 235, 0.52);
 }
 
 .s2th {
@@ -30,6 +30,7 @@
   width: 3em;
   animation-delay: 1s;
   animation-duration: 17s;
+  background: rgba(235, 235, 235, 0.37);
   -webkit-filter: blur(5px)
 }
 
@@ -46,6 +47,7 @@
   width: 1.5em;
   animation-delay: 0.5s;
   -webkit-filter: blur(3px);
+  background: rgba(235, 235, 235, 0.31);
   animation-duration: 13s
 }
 
@@ -62,6 +64,7 @@
   width: 2em;
   animation-delay: 2s;
   -webkit-filter: blur(1px);
+  background: rgba(235, 235, 235, 0.91);
   animation-duration: 9s
 }
 

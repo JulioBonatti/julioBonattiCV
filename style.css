@@ -47,10 +47,9 @@
 }
 
 .page-content {
-    width: 1440px;
+    width: 70rem;
     margin: 0 auto;
     box-shadow: 0 20px 48px rgba(22, 30, 42, 0.42);
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -78,4 +77,22 @@
     width: 3px;
     border-radius: 50%;
     background-color: #27ae5f;
+}
+
+.scroll-btn-container {
+    position: fixed;
+    right: 3.8rem;
+    top: 38%;
+    width: 4.5rem;
+}
+
+.scroll-btn {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    border: 3px solid #27ae5f;
+    box-shadow: 0 20px 48px rgba(22, 30, 42, 0.42);
+    margin: 10px 0px;
+    color: #fcfcfc;
+    background-color: #1a1d2c;
 }

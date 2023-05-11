@@ -1,6 +1,4 @@
-<script>
-    //script here
-</script>
+<!DOCTYPE html>
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -9,8 +7,15 @@
 <html lang="en-us" style="font-size: 16px">
 
 <body class="body-parent">
-    <div class="nav-bar">
+    <div class="nav-bar" >
         <strong class="title">Julio Bonatti CV</strong>
+    </div>
+    <div class="scroll-btn-container" >
+        <a href="#intro" class="scroll-btn" >aasdasdasda</a>
+        <a href="#about" class="scroll-btn" >ab</a>
+        <a href="#career" class="scroll-btn" >ac</a>
+        <a href="#skills" class="scroll-btn" >ac</a>
+        <a href="#hobbies" class="scroll-btn" >ac</a>
     </div>
     <div class="aniamtion-wrapper">
         <div class="squares">
@@ -24,7 +29,7 @@
         </div>
     </div>
     <div class="page-container">
-        <div class="page-content first">
+        <section id="intro" class="page-content first">
             <strong class="title" style="font-size: 42px; max-width: 700px; z-index: 500;">
                 Hi,
                 <strong style="color: #27ae5f">
@@ -35,8 +40,8 @@
                     Hello, and welcome to my personal page! I am a Control and Automation Engineer with a passion for technology and art. On this page, you'll learn more about me, my career, my skills, and my hobbies.
                 </p>
             </strong>
-        </div>
-        <div class="page-content second">
+        </section>
+        <section id="about" class="page-content second">
             <strong class="title" style="font-size: 42px; max-width: 700px; z-index: 500; color: #060606;">
                 About me
                 <p style="color: #060606; font-size: 16px; text-align: justify;">
@@ -44,8 +49,8 @@
                     Throughout my career, I have developed a strong expertise in HTML, CSS, Python, Machine Learning, and Calculus. 
                 </p>
             </strong>
-        </div>
-        <div class="page-content first">
+        </section>
+        <section id="career" class="page-content first">
             <strong class="title" style="font-size: 42px; max-width: 700px; z-index: 500;">
                 Career
                 <p style="color: rgba(255,255,255,0.72); font-size: 16px; text-align: justify;">
@@ -54,8 +59,8 @@
                     collaborating with teams to create new features, participating in code reviews and testing, and working closely with project managers to ensure timely delivery of projects.
                 </p>
             </strong>
-        </div>
-        <div class="page-content second">
+        </section>
+        <section id="skills" class="page-content second">
             <strong class="title" style="font-size: 42px; max-width: 700px; z-index: 500; color: #060606;">
                 skills
                 <p style="color: #060606; font-size: 16px; text-align: justify;">
@@ -63,8 +68,8 @@
                     My creative skills include digital art and animations, and I have developed a unique approach to problem-solving that blends technical and artistic perspectives.
                 </p>
             </strong>
-        </div>
-        <div class="page-content third">
+        </section>
+        <section id="hobbies" class="page-content third">
             <strong class="title" style="font-size: 42px; max-width: 700px; z-index: 500;">
                 Hobbies
                 <p style="color: rgba(255,255,255,0.72); font-size: 16px; text-align: justify;">
@@ -73,8 +78,29 @@
                     Listening to music and playing video games help me unwind and relax after a busy day of work.
                 </p>
             </strong>
-        </div>
+        </section>
     </div>
+    <script>
+        const navLinks = document.querySelectorAll('a');
+        const sections = document.querySelectorAll('section');
+
+        function changeLinkState() {
+            // Iterate over the sections
+            sections.forEach((section, index) => {
+                // Check if the section is in the viewport
+                const isInViewport = section.getBoundingClientRect().top <= 50 && section.getBoundingClientRect().bottom >= 50;
+                // If the section is in the viewport, highlight the corresponding link
+                if (isInViewport) {
+                    navLinks.forEach((link) => link.classList.remove('active'));
+                    navLinks[index].classList.add('active');
+                }
+            });
+        }
+
+        changeLinkState();
+        window.addEventListener('scroll', changeLinkState);
+    </script>
 </body>
+
 
 </html>

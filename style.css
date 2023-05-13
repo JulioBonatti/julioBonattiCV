@@ -80,19 +80,31 @@
 }
 
 .scroll-btn-container {
+    display: flex;
     position: fixed;
+    flex-direction: column;
     right: 3.8rem;
-    top: 38%;
+    top: 30%;
     width: 4.5rem;
 }
 
 .scroll-btn {
-    width: 4.2rem;
-    height: 4.2rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     border: 3px solid #27ae5f;
     box-shadow: 0 20px 48px rgba(22, 30, 42, 0.42);
-    margin: 10px 0px;
+    margin: 6px 0px;
     color: #fcfcfc;
     background-color: #1a1d2c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    color: #fcfcfc;
 }
